@@ -1,0 +1,40 @@
+<%- include("partials/header") %>
+
+<div class = "addLog_container addLog_page">
+    <form action = "/blog/submit" method = "post">
+        <div class = "main_content addLog_page">
+            <div class = "top_container addLog_page">
+                <% if (locals.title) { %>
+                    <input value="<%= title %>" type="text" placeholder="Title" class="title_container addLog_page" name="title" required>
+                <% } else { %>
+                    <input type="text" placeholder="Title" class="title_container addLog_page" name="title" required>
+                <% } %>
+            </div>
+            
+            <div class = "bottom_container addLog_page">
+                <% if (locals.description) { %>
+                    <input value="<%= description %>" type="text" placeholder="Description" class="description_container addLog_page" name="description" required>
+                <% } else { %>
+                    <input type="text" placeholder="Description" class="description_container addLog_page" name="description" required>
+                <% } %>
+
+                <% if (locals.content){ %>
+                    <textarea type = "text" placeholder = "Content"  name = "content" class = "content_container addLog_page"><%= content %></textarea>
+                <% } else { %>
+                    <textarea type = "text" placeholder = "Content"  name = "content" class = "content_container addLog_page"></textarea>
+                <% } %>
+            </div>
+        </div>
+
+        <div class = "test">
+            <% if (locals.title){ %>
+                <input type = "submit" value = "Edit Log" class = "submit_button addLog_page">
+            <% } else { %>
+                <input type = "submit" value = "Add log" class = "submit_button addLog_page">
+            <% } %>
+        </div>
+        
+    </form>
+</div>
+
+<%- include("partials/footer") %>

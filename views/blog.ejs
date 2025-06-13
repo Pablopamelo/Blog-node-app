@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+
+    <div class = "create_new_log blog_page">
+        <a href = "/addLog"> <input class = "create_new_log_button blog_page" type = "button" value = "Create new Log"> </a>
+    </div>
+
+    <div class = "main_content blog_page">
+        <% for(let i = 0; i < iterations; i++){ %>
+                <a href = "/log/<%= i %>">
+                <div class = "log_container blog_page">
+                    <div class = "top_container blog_page">
+                        <div class = "title_container blog_page"> <%= logs[i]["title"] %> </div>
+                        <div class = "date_container blog_page"> <%= logs[i]["date"] %> </div>
+                    </div>
+
+                    <div class = "bottom_container blog_page">
+                        <div class = "description_container blog_page"> <%= logs[i]["description"] %> </div>
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+
+<%- include("partials/footer") %>

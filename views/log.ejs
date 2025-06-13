@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+
+<div class = "log_container logs_page">
+    <div class = "main_content logs_page"> 
+
+    <a href = "/log/<%= log_id %>/edit"> <input type = "submit" class = "edit_button logs_page" value = "E"> </a>
+
+    <a href = "/log/<%= log_id %>/delete"> <input type = "submit" class = "delete_button logs_page" value = "X"> </a>
+
+    <div class = "title_container logs_page"> <%= title %> </div> <div class = "date logs_page"> <%= date %> </div>
+    <div class = "content_container logs_page"> <%= content %> </div>
+    <a href = "/blog"><div class = "back_button logs_page">&lt=</div></a>
+    </div>
+</div>
+    
+
+<%- include("partials/footer") %>

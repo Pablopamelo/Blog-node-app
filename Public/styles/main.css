@@ -1,0 +1,382 @@
+body{
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.5px;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Main Page */
+
+.main_content.home_page{
+    padding: 1rem 2.5rem;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: calc(100vh / 7) auto 0 auto;
+}
+
+.img_container.home_page{
+    display: flex;
+    flex: 0 1 100px;
+    padding: 0 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.selfie.home_page{
+    border-radius: 50%;
+    width: 18rem;
+    height: 18rem;
+}
+
+.title.home_page{
+    font-family: "Frank Ruhl Libre", serif;
+    flex: 0 1;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    word-spacing: 7.5px;
+}
+
+.about.home_page{
+    font-family: "Poppins", sans-serif;
+    flex: 0 1 100px;
+    text-align: justify;
+    padding: 0.875rem 1.75rem;
+    font-size: 1.2rem;
+    line-height: 180%;
+    border-radius: 2px;
+    background-color: rgb(247, 247, 247);
+    margin-bottom: 6rem;
+}
+
+/* Contact Page */
+
+.main_content.contact_page{
+    padding: 1rem 2.5rem;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: calc(100vh / 3.5) auto 0 auto;
+    gap: calc(100vh / 60);
+    font-family: "Poppins", sans-serif;
+}
+
+textarea.contact_page, input.contact_page{
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 2px;
+}
+
+textarea.contact_page:focus, input.contact_page:focus{
+    outline: none;
+    border: 2px solid rgb(180, 180, 180);
+    padding: 0.5rem calc(1rem - 1px);
+}
+
+textarea.contact_page:focus{
+    padding: calc(0.5rem - 1px) calc(1rem - 1px);
+}
+
+textarea.contact_page::placeholder, input.contact_page::placeholder{
+    opacity: 0.7;
+}
+
+.name_container.contact_page{
+    flex: 0 1 calc(100vh / 25);
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+.email_container.contact_page{
+    flex: 0 1 calc(100vh / 25);
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+.comment_container.contact_page{
+    flex: 0 1 calc(100vh / 7.5);
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.submit_button.contact_page{
+    flex: 0 1 calc(100vh / 20);
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    background-color: rgb(200, 255, 145);
+    cursor: pointer;
+    border: 0;
+    letter-spacing: 2px;
+}
+
+.submit_button.contact_page:focus{
+    border: 0;
+}
+
+.submit_button.contact_page:active{
+    border: 0;
+    background-color: rgb(190, 240, 135);
+}
+
+/* Blog Page */
+
+.main_content.blog_page{
+    padding: 1rem 2.5rem;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem auto 70px auto;
+    gap: 5rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.log_container.blog_page{
+    border: 1px solid rgb(180, 180, 180);
+    background-color: rgb(250, 250, 250);
+    border-radius: 2px;
+    flex: 0 1 150px;
+    box-sizing: border-box;
+    padding: 1rem;
+    position: relative;
+}
+
+.create_new_log.blog_page{
+    padding: 0 2.5rem;
+    margin: calc(75px + 1.5rem) auto 0 auto;
+    max-width: 1440px;
+    border-top: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.create_new_log_button.blog_page{
+    width: 100%;
+    height: 4rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    border: 0;
+    padding: 1rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    background-color: rgb(200, 255, 145);
+}
+
+.create_new_log_button.blog_page:active{
+    background-color: rgb(190, 240, 135);
+}
+
+.top_container.blog_page{
+    border-bottom: 1px dashed rgb(180, 180, 180);
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title_container.blog_page{
+    font-size: 2rem;
+}
+
+.bottom_container.blog_page{
+    height: 50%;
+    font-size: 1.2rem;
+    color: #444;
+    align-items: center;
+}
+
+/* Add Log Page */
+
+.addLog_container.addLog_page{
+    padding: 1rem 2.5rem;
+}
+
+.main_content.addLog_page{
+    padding: 1rem;
+    max-width: 1440px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin: calc(100vh / 3.75) auto 0 auto;
+    gap: calc(100vh / 60);
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(180, 180, 180);
+}
+
+.top_container.addLog_page{
+    display: flex;
+    flex-direction: row;
+    font-family: "Poppins", sans-serif;
+}
+
+.bottom_container.addLog_page{
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+.date_container.addLog_page{
+    margin-left: auto;
+}
+
+textarea.addLog_page, input.addLog_page{
+    font-family: "Poppins", sans-serif;
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 2px;
+    border: 1px solid rgb(180, 180, 180);
+}
+
+textarea.addLog_page:focus, input.addLog_page:focus{
+    outline: none;
+    border: 2px solid rgb(180, 180, 180);
+    padding: calc(0.5rem - 1px) calc(1rem - 1px);
+}
+
+textarea.addLog_page::placeholder, input.addLog_page::placeholder{
+    opacity: 0.7;
+}
+
+.title_container.addLog_page{
+    flex: 0 1 calc(100vh / 20); 
+    font-size: 1.5rem;
+    max-width: 250px;
+    box-sizing: border-box;
+    margin-right: auto;
+}
+
+.content_container.addLog_page{
+    flex: 0 1 calc(100vh / 5);
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.description_container.addLog_page{
+    flex: 0 1;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.submit_button.addLog_page{
+    margin-top: 2rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background-color: rgb(200, 255, 145);
+    cursor: pointer;
+    border: 0;
+    letter-spacing: 2px;
+    padding: 1rem;
+    width: 100%;
+}
+
+.test{
+    max-width: 1440px;
+    margin: 1rem auto 0 auto;
+}
+
+.submit_button.addLog_page:focus{
+    padding: 1rem;
+    border: 0;
+}
+
+.submit_button.addLog_page:active{
+    padding: 1rem;
+    border: 0;
+    background-color: rgb(190, 240, 135);
+}
+
+/* Log Page */
+
+.log_container.logs_page{
+    padding: 1rem 3.5rem 1rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.main_content.logs_page{
+    max-width: 1440px;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: calc(100vh / 7) auto 0 auto;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(180, 180, 180);
+    min-height: 500px;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+
+.title_container.logs_page{
+    flex: 0 1 calc(100vh / 20);
+    font-size: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: auto;
+    font-size: 3rem;
+    border-bottom: 1px dashed black;
+    display: inline;
+}
+
+.content_container.logs_page{
+    margin-top: 0.5rem;
+    text-align: justify;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.back_button.logs_page{
+    cursor: pointer;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: -5rem;
+    left : 0;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+input[type = submit].logs_page{
+    font-size: 2rem;
+    font-weight: 700;
+    width: 2.5rem;
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(180, 180, 180);
+    cursor: pointer;
+    position: absolute;
+}
+
+input[type = submit].logs_page:active{
+    background-color: rgb(230, 230, 230);
+}
+
+.delete_button.logs_page{
+    top: 0rem;
+    right: -3rem;
+    color: red;
+}
+
+.edit_button.logs_page{
+    top: 3rem;
+    right: -3rem;
+    color: green;
+}
+
+.date.logs_page{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
