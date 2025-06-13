@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.static("Public"));
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded( {extended: true} ));
 

@@ -1,15 +1,15 @@
 FROM node:22
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/Blog
 
 COPY package*.json ./
 
 RUN npm install
 
-COPY . ./
+COPY . .
 
-ENV PORT=9000
+ENV PORT=3000
 
-EXPOSE 9000
+EXPOSE 3000
 
-CMD ["npm", "run" ,"start"];
+CMD ["npm", "start"]
