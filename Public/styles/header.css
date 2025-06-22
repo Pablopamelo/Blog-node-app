@@ -12,6 +12,7 @@
     z-index: 100;
     width: 100vw;
     overflow-x: hidden;
+    height: 70px;
 }
 
 .title.header{
@@ -31,6 +32,12 @@
     gap: 2.4rem;
     align-items: center;
     justify-content: center;
+}
+
+.pb{
+    position: absolute;
+    top: -62.5px;
+    left: 1.2rem;
 }
 
 .nav_tile{
