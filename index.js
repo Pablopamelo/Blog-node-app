@@ -28,8 +28,6 @@ class log{
     }
 }
 
-app.set('view engine', 'ejs');
-
 app.get("/", (req,res) => {
     res.render("home.ejs");
 });
@@ -44,7 +42,7 @@ app.get(`/log/:id`, (req,res) => {
     let title = logs[log_id]["title"];
     let content = logs[log_id]["content"];
     let date = logs[log_id]["date"];
-    res.render("log", {title, content, date, log_id});
+    res.render("log.ejs", {title, content, date, log_id});
 });
 
 app.get(`/log/:id/edit`, (req,res) => {
@@ -59,7 +57,6 @@ app.get(`/log/:id/edit`, (req,res) => {
 
 app.get(`/log/:id/delete`, (req,res) => {
     let log_id = req.params.id;
-    let iterations = logs.length;
     j--;
     res.redirect("/blog");
     logs.splice(log_id,1);
@@ -71,7 +68,6 @@ app.get("/addlog", (req,res) => {
 });
 
 app.post("/blog/submit", (req,res) => {
-    let iterations = logs.length;
     let date = new Date;
     let day = date.getDate();
     let month = date.getMonth();
@@ -90,7 +86,6 @@ app.post("/blog/submit", (req,res) => {
         let description = req.body["description"];
         let content = req.body["content"];
         logs[j] = new log(title, description, content, fulldate);
-        res.redirect("/blog");
         j++;
     }else{
         edit = false;
@@ -102,9 +97,9 @@ app.post("/blog/submit", (req,res) => {
         logs[one_time_id]["description"] = description;
         logs[one_time_id]["content"] = content;
         logs[one_time_id]["date"] = fulldate;
-        res.redirect("/blog");
     }
 
+    res.redirect("/blog");
     one_time_id = 0;
 
 });
