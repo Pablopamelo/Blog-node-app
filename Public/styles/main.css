@@ -136,7 +136,7 @@ textarea.contact_page::placeholder, input.contact_page::placeholder{
     display: flex;
     flex-direction: column;
     margin: 0.5rem auto 70px auto;
-    gap: 5rem;
+    gap: 2rem;
     font-family: "Poppins", sans-serif;
 }
 
